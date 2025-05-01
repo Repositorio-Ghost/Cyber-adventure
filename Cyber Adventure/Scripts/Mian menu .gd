@@ -3,6 +3,8 @@ extends Control
 
 func _on_play_pressed():
 	get_tree().change_scene_to_file("res://Esanas/world.tscn")
+	Global.Cargar()
+	
 
 
 func _on_options_pressed():

@@ -24,3 +24,5 @@ func _physics_process(delta):
 		animation_player.play("idle")
 
 	move_and_slide()
+	
+	

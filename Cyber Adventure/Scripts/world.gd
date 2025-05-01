@@ -7,6 +7,7 @@ const LAND_CAP = 0.2
 
 func _ready():
 	generate_world()
+	
 
 func generate_world():
 	var noise = FastNoiseLite.new()
@@ -23,3 +24,4 @@ func generate_world():
 				
 				
 	tileMap.set_cells_terrain_connect(0, cells, 0, 0)
+	Global.Guardar()
