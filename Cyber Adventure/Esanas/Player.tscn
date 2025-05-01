@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://xhmnyk2tjyvg"]
 
-[ext_resource type="Script" path="res://Scrpts/Player.gd" id="1_o1h31"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_o1h31"]
 [ext_resource type="Texture2D" uid="uid://wfls6j1op63i" path="res://Textures/Skeleton.png" id="2_6pceo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5538t"]
@@ -171,4 +171,4 @@ libraries = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(6, 6)
+zoom = Vector2(2, 2)

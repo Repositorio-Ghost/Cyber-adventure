@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://3anibhbjb8ds"]
 
-[ext_resource type="Script" path="res://Scrpts/Options.gd" id="1_7j03w"]
+[ext_resource type="Script" path="res://Scripts/Options.gd" id="1_7j03w"]
 [ext_resource type="Texture2D" uid="uid://cwc5nr63hdje2" path="res://Textures/Pixel Crawler - Free Pack/Main menu/Imagen de WhatsApp 2025-04-29 a las 19.58.23_bec027a2.jpg" id="2_0swpj"]
 
 [node name="Options" type="Control"]
@@ -52,8 +52,8 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 22
 text = "Atras"
 
-[connection signal="pressed" from="VBoxContainer/Full screen" to="." method="_on_full_screen_pressed"]
 [connection signal="pressed" from="VBoxContainer/Full screen" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Full screen" to="." method="_on_full_screen_pressed"]
 [connection signal="pressed" from="VBoxContainer/Volume" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="VBoxContainer/back" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/back" to="." method="_on_back_pressed"]

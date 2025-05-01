@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cq5srmuttasyr"]
 
-[ext_resource type="Script" path="res://Scrpts/Mian menu .gd" id="1_snidp"]
+[ext_resource type="Script" path="res://Scripts/Mian menu .gd" id="1_snidp"]
 [ext_resource type="Texture2D" uid="uid://cwc5nr63hdje2" path="res://Textures/Pixel Crawler - Free Pack/Main menu/Imagen de WhatsApp 2025-04-29 a las 19.58.23_bec027a2.jpg" id="2_4r01l"]
 
 [node name="Main menu" type="Control"]
