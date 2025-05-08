@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmvk6t1h48y2q"]
+
+[ext_resource type="Script" uid="uid://sr0ly8n1tpa8" path="res://Scripts/dialogos.gd" id="1_1tpxk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1tpxk"]
+bg_color = Color(0.559965, 0.782481, 0.925617, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1tpxk")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 394.0
+offset_right = 392.0
+offset_bottom = 555.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tpxk")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 38.0
+offset_top = 410.0
+offset_right = 377.0
+offset_bottom = 520.0
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 172.0
+offset_top = 523.0
+offset_right = 217.0
+offset_bottom = 554.0
+text = "Next
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

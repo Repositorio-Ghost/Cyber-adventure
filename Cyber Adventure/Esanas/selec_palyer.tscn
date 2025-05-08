@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=3 uid="uid://dm55xwclccamt"]
+
+[ext_resource type="Script" path="res://Scripts/Selecioanr personajes.gd" id="1_f44jo"]
+[ext_resource type="Texture2D" uid="uid://c7vjkjyn13cmh" path="res://Textures/Pixel Crawler - Free Pack/Entities/Characters/Body_A/Animations/Idle_Base/Idle_Down-Sheet.png" id="2_0ubg4"]
+[ext_resource type="Script" path="res://Scripts/CharacterData.gd" id="2_lfccm"]
+[ext_resource type="Texture2D" uid="uid://clr0aiknwum3h" path="res://Textures/Pixel Crawler - Free Pack/Entities/Mobs/Orc Crew/Orc/Idle/Idle-Sheet.png" id="4_lfccm"]
+
+[sub_resource type="Resource" id="Resource_dj48d"]
+script = ExtResource("2_lfccm")
+Key = "0"
+Imagen = ExtResource("2_0ubg4")
+metadata/_custom_type_script = "uid://ggq6pviquwnv"
+
+[sub_resource type="Resource" id="Resource_j6aqs"]
+script = ExtResource("2_lfccm")
+Key = "1"
+Imagen = ExtResource("4_lfccm")
+metadata/_custom_type_script = "uid://ggq6pviquwnv"
+
+[node name="select palyer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f44jo")
+Personaje = Array[ExtResource("2_lfccm")]([SubResource("Resource_dj48d"), SubResource("Resource_j6aqs")])
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = 10.0
+offset_right = -5.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.598256, 0.810119, 0.788702, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(581, 297)
+scale = Vector2(3.94531, 3.40625)
+texture = ExtResource("2_0ubg4")
+hframes = 4
+
+[node name="Seleccionar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = 72.0
+offset_right = 72.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 23
+text = "Selecsionar"
+
+[node name="Siguiente" type="Button" parent="."]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 337.0
+offset_right = 830.0
+offset_bottom = 396.0
+theme_override_font_sizes/font_size = 37
+text = ">"
+
+[node name="Anterior" type="Button" parent="."]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 338.0
+offset_right = 369.0
+offset_bottom = 397.0
+theme_override_font_sizes/font_size = 37
+text = "<"
+
+[connection signal="pressed" from="Seleccionar" to="." method="_on_seleccionar_pressed"]
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]
+[connection signal="pressed" from="Anterior" to="." method="_on_anterior_pressed"]

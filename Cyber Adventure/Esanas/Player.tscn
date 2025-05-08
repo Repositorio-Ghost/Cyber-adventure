@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://xhmnyk2tjyvg"]
+[gd_scene load_steps=11 format=3 uid="uid://xhmnyk2tjyvg"]
 
-[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_o1h31"]
+[ext_resource type="Script" uid="uid://c2kxoih6ilsj6" path="res://Scripts/Player.gd" id="1_o1h31"]
 [ext_resource type="Texture2D" uid="uid://wfls6j1op63i" path="res://Textures/Skeleton.png" id="2_6pceo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5538t"]
@@ -144,16 +144,13 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ljaic"]
 _data = {
-"RESET": SubResource("Animation_ugwkg"),
-"caminar_abajo": SubResource("Animation_8hcra"),
-"caminar_arriba": SubResource("Animation_wmonc"),
-"caminar_derecha": SubResource("Animation_0b01c"),
-"caminar_izquierda": SubResource("Animation_o24fc"),
-"idle": SubResource("Animation_l52qb")
+&"RESET": SubResource("Animation_ugwkg"),
+&"caminar_abajo": SubResource("Animation_8hcra"),
+&"caminar_arriba": SubResource("Animation_wmonc"),
+&"caminar_derecha": SubResource("Animation_0b01c"),
+&"caminar_izquierda": SubResource("Animation_o24fc"),
+&"idle": SubResource("Animation_l52qb")
 }
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_36bir"]
-size = Vector2(26, 26)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_o1h31")
@@ -170,15 +167,8 @@ frame = 17
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_ljaic")
+&"": SubResource("AnimationLibrary_ljaic")
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_36bir")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
