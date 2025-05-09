@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ckrb5x32t7nqa"
+path="res://.godot/imported/WhatsApp Audio 2025-05-07 at 8.35.33 PM.mpeg.wav-c54b7cffe905182e02c9cfe3e21226d5.sample"
+
+[deps]
+
+source_file="res://Sons/WhatsApp Audio 2025-05-07 at 8.35.33 PM.mpeg.wav"
+dest_files=["res://.godot/imported/WhatsApp Audio 2025-05-07 at 8.35.33 PM.mpeg.wav-c54b7cffe905182e02c9cfe3e21226d5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
