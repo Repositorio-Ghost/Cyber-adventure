@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmvk6t1h48y2q"]
+[gd_scene load_steps=5 format=3 uid="uid://dmvk6t1h48y2q"]
 
-[ext_resource type="Script" uid="uid://sr0ly8n1tpa8" path="res://Scripts/dialogos.gd" id="1_1tpxk"]
+[ext_resource type="Script" path="res://Scripts/dialogos.gd" id="1_1tpxk"]
+[ext_resource type="Texture2D" uid="uid://vslbk8k5bip5" path="res://Textures/c0f9aa96-1731-4928-ad33-35d97c9aa386-removebg-preview.png" id="2_bj08l"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1tpxk"]
-bg_color = Color(0.559965, 0.782481, 0.925617, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cb366"]
+texture = ExtResource("2_bj08l")
 
-[node name="Control" type="Control"]
+[sub_resource type="Theme" id="Theme_odyey"]
+default_font_size = 8
+
+[node name="dialogos" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,29 +19,31 @@ grow_vertical = 2
 script = ExtResource("1_1tpxk")
 
 [node name="Panel" type="Panel" parent="."]
+texture_filter = 1
 layout_mode = 0
-offset_left = 22.0
-offset_top = 394.0
-offset_right = 392.0
-offset_bottom = 555.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_1tpxk")
+offset_right = 370.0
+offset_bottom = 161.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_cb366")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 texture_filter = 1
+texture_repeat = 1
 layout_mode = 0
-offset_left = 38.0
-offset_top = 410.0
-offset_right = 377.0
-offset_bottom = 520.0
+offset_left = 113.0
+offset_top = 52.0
+offset_right = 259.0
+offset_bottom = 106.0
+theme = SubResource("Theme_odyey")
 
-[node name="Button" type="Button" parent="."]
+[node name="next" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 172.0
-offset_top = 523.0
-offset_right = 217.0
-offset_bottom = 554.0
+offset_left = 160.0
+offset_top = 129.0
+offset_right = 205.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 0
 text = "Next
 "
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="next" to="." method="_on_button_pressed"]

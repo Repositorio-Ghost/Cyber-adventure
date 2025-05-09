@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://crv84d1s5acbn"
+path="res://.godot/imported/song menu-prt1.wav-ff2ffae803a4e8c29f0b4b9023ade720.sample"
+
+[deps]
+
+source_file="res://Sons/song menu-prt1.wav"
+dest_files=["res://.godot/imported/song menu-prt1.wav-ff2ffae803a4e8c29f0b4b9023ade720.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
