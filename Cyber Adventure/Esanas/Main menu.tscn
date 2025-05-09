@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Mian menu .gd" id="1_snidp"]
 [ext_resource type="Texture2D" uid="uid://bw0rsag8yo7pr" path="res://Textures/Retro-Pixel-Art-AI-Generated-4K-Wallpaper.jpg" id="2_28u85"]
-[ext_resource type="AudioStream" uid="uid://crv84d1s5acbn" path="res://Sons/song menu-prt1.wav" id="3_ksacd"]
+[ext_resource type="AudioStream" uid="uid://d26gdgbvlmqbu" path="res://Textures/FREE_PixelFlow_fantasy/OST/Town Music 2.mp3" id="3_q6sbx"]
 
 [node name="Main menu" type="Control"]
 layout_mode = 3
@@ -12,6 +12,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_snidp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_q6sbx")
+autoplay = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -52,10 +56,6 @@ text = "Opciones "
 layout_mode = 2
 theme_override_font_sizes/font_size = 22
 text = "Salir "
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_ksacd")
-autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
